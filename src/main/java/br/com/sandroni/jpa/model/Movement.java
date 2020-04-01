@@ -2,6 +2,7 @@ package br.com.sandroni.jpa.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,6 +10,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 import br.com.sandroni.jpa.enums.MovimentType;
@@ -16,8 +18,12 @@ import br.com.sandroni.jpa.enums.MovimentType;
 @Entity
 public class Movement {
 	
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@ManyToMany
+	private List<Category> categories;
 	
 	@Enumerated(EnumType.STRING)
 	private MovimentType movimentType;
@@ -74,6 +80,14 @@ public class Movement {
 
 	public void setAccount(Account account) {
 		this.account = account;
+	}
+	
+	public List<Category> getCategories() {
+		return categories;
+	}
+
+	public void setCategories(List<Category> categories) {
+		this.categories = categories;
 	}
 	
 }

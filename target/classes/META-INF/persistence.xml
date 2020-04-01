@@ -9,7 +9,8 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>br.com.sandroni.jpa.model.Account</class>
 		<class>br.com.sandroni.jpa.model.Movement</class>
-
+		<class>br.com.sandroni.jpa.model.Client</class>
+		<class>br.com.sandroni.jpa.model.Category</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
