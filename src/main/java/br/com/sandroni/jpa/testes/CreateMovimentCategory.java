@@ -25,7 +25,7 @@ public class CreateMovimentCategory {
 		
 		Movement movement = new Movement();
 		movement.setAccount(account);
-		movement.setBalance(new BigDecimal(2500.00));
+		movement.setBalance(new BigDecimal(250.00));
 		movement.setMovimentType(MovimentType.EXIT);
 		movement.setDate(LocalDateTime.now());
 		movement.setDescription("Viagem ao RJ");
@@ -33,7 +33,7 @@ public class CreateMovimentCategory {
 		
 		Movement movement2 = new Movement();
 		movement2.setAccount(account);
-		movement2.setBalance(new BigDecimal(2500.00));
+		movement2.setBalance(new BigDecimal(300.00));
 		movement2.setMovimentType(MovimentType.EXIT);
 		movement2.setDate(LocalDateTime.now());
 		movement2.setDescription("Viagem ao RJ");
